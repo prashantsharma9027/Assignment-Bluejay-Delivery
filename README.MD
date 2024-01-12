@@ -9,7 +9,8 @@ Write a program that:
 3. Write a clean code with code comments and assumptions (if any) you are making
 
 Console menu ->
-![Uploading Screenshot 2024-01-12 204924.png…]()
+![Screenshot 2024-01-12 204924](https://github.com/prashantsharma9027/Assignment-Bluejay-Delivery/assets/91558085/66e3aa40-f733-4686-8bd7-2592a6bfbfc0)
+
 
 Made by Prashant Sharma
 Portfolio - https://prashant-sharma.vercel.app/
