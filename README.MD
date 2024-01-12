@@ -8,6 +8,12 @@ Write a program that:
       c) Who has worked for more than 14 hours in a single shift
 3. Write a clean code with code comments and assumptions (if any) you are making
 
+Steps to clone this Assignment
+1. clone this Respo.
+2. Ensure that you have succesfully installed NODE.JS
+3. Install these 3 NPM packages { "fs": "^0.0.1-security", "path": "^0.12.7", "readline": "^1.3.0" }
+4. Now run node index.js in you terminal.
+
 Console menu ->
 ![Screenshot 2024-01-12 204924](https://github.com/prashantsharma9027/Assignment-Bluejay-Delivery/assets/91558085/66e3aa40-f733-4686-8bd7-2592a6bfbfc0)
 
