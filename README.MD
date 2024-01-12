@@ -8,6 +8,8 @@ Write a program that:
       c) Who has worked for more than 14 hours in a single shift
 3. Write a clean code with code comments and assumptions (if any) you are making
 
+Console menu ->
+![plot](Screenshot 2024-01-12 204924.png)
 
 Made by Prashant Sharma
 Portfolio - https://prashant-sharma.vercel.app/
