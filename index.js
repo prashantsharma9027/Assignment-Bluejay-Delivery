@@ -1,9 +1,16 @@
 const fs = require('fs');
+const path = require('path');
 const readline = require('readline');
 
 const Data = fs.readFileSync('data.json', 'utf8');
 const data = JSON.parse(Data);
 const n = data.length;
+const outputFolder = 'outputs';
+
+if (!fs.existsSync(outputFolder)) 
+{
+    fs.mkdirSync(outputFolder);
+}
 
 
 const rl = readline.createInterface({
@@ -61,10 +68,11 @@ function Question1(){
                 j++;
             }
             i = j - 1;
-            if (maxDays >= 7) 
-            {
+            if (maxDays >= 7) {
+                const outputFileName = path.join(outputFolder, 'Question1.txt');
                 const str = data[i]['Position ID'] + " " + data[i]['Employee Name'] + " " + data[i]['File Number'];
-                fs.appendFile("Question1.txt", str + '\n', (err) => {
+            
+                fs.appendFile(outputFileName, str + '\n', (err) => {
                     if (err) {
                         console.log(err);
                     }
@@ -72,7 +80,8 @@ function Question1(){
             }
         } 
     }
-    console.log("Query has been executed Successfully Check Ouput Text file as Question1.txt");
+    console.log("Query has been executed Successfully ");
+    console.log("Results saved to outputs Folder");
 }
 
 function Question2(){
@@ -107,16 +116,18 @@ function Question2(){
         i = j - 1;
         if (bool === true) 
         {
+            const outputFileName = path.join(outputFolder, 'Question2.txt');
             const str = `${data[i]['Position ID']} "${data[i]['Employee Name']}" ${data[i]['File Number']}\n`;
-            fs.appendFile("Question2.txt", str, (err) => 
-            {
+            
+            fs.appendFile(outputFileName, str + '\n', (err) => {
                 if (err) {
                     console.log(err);
                 }
             });
         }
     }
-    console.log("Query has been executed Successfully Check Ouput Text file as Question2.txt");
+    console.log("Query has been executed Successfully ");
+    console.log("Results saved to outputs Folder");
 }
 
 function Question3(){
@@ -133,8 +144,10 @@ function Question3(){
 
             if (hours > 14 || (hours === 14 && minutes > 0)) 
             {
+                const outputFileName = path.join(outputFolder, 'Question3.txt');
                 const str = `${data[i]['Position ID']} "${data[i]['Employee Name']}" ${data[i]['File Number']}\n`;
-                fs.appendFile("Question3.txt", str, (err) => {
+                
+                fs.appendFile(outputFileName, str + '\n', (err) => {
                     if (err) {
                         console.log(err);
                     }
@@ -142,7 +155,8 @@ function Question3(){
             }
         }
     }
-    console.log("Query has been executed Successfully Check Ouput Text file as Question3.txt");
+    console.log("Query has been executed Successfully ");
+    console.log("Results saved to outputs Folder");
 }
 
 function banner() {
