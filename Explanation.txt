@@ -1,0 +1,6 @@
+1. First i download the xlsx file from the link provided by company.
+2. Now i want to convert xlsx file to json format so that i can easily deal with data using JavaScript, For this i used an online
+converter (https://products.aspose.app/cells/conversion/xlsx-to-json) and save it to my file as (data.json).
+3. Now i have made 3 separate function as Question1(),Question2(),Question3().
+4. Now I am taking the user input from the console and perform that Question using Switch case.
+5. After that the output of Question is saved as text(.txt) file with Name Question`${QuestionNumber}`.txt .
