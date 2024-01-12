@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const readline = require('readline');
 
-const Data = fs.readFileSync('data.json', 'utf8');
+const dataFilePath = path.join(__dirname, 'Data', 'data.json');
+const Data = fs.readFileSync(dataFilePath, 'utf8');
+
 const data = JSON.parse(Data);
 const n = data.length;
 const outputFolder = 'outputs';
@@ -70,7 +72,7 @@ function Question1(){
             i = j - 1;
             if (maxDays >= 7) {
                 const outputFileName = path.join(outputFolder, 'Question1.txt');
-                const str = data[i]['Position ID'] + " " + data[i]['Employee Name'] + " " + data[i]['File Number'];
+                const str = `${data[i]['Position ID']} "${data[i]['Employee Name']}" ${data[i]['File Number']}\n`;
             
                 fs.appendFile(outputFileName, str + '\n', (err) => {
                     if (err) {
